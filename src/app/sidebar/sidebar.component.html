@@ -1,0 +1,48 @@
+<div class="h-full w-64 bg-gradient-to-b from-blue-900 to-green-800 text-white flex flex-col shadow-lg">
+  <!-- Sidebar Header -->
+  <div class="text-lg font-bold p-4 border-b border-green-300 cursor-pointer bg-gradient-to-r from-blue-700 to-green-700">
+    <span class="tracking-wide">{{ 'SIDEBAR.TRADING_STOCK' | translate }}</span>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <ul class="flex-1 space-y-2 p-4">
+    <li>
+      <button
+        (click)="navigateToTab('exchange')"
+        [ngClass]="{
+          'bg-green-500 text-white': activeTab === 'exchange',
+          'hover:bg-green-600 hover:text-white transition duration-300 ease-in-out': activeTab !== 'exchange'
+        }"
+        class="block w-full text-left px-4 py-3 rounded-lg shadow-md transform hover:scale-105"
+      >
+        {{ 'SIDEBAR.EXCHANGE' | translate }}
+      </button>
+    </li>
+    <li>
+      <button
+        (click)="navigateToTab('candle')"
+        [ngClass]="{
+          'bg-green-500 text-white': activeTab === 'candle',
+          'hover:bg-green-600 hover:text-white transition duration-300 ease-in-out': activeTab !== 'candle'
+        }"
+        class="block w-full text-left px-4 py-3 rounded-lg shadow-md transform hover:scale-105"
+      >
+        {{ 'SIDEBAR.CANDLE' | translate }}
+      </button>
+    </li>
+    <li>
+      <button
+        (click)="navigateToTab('metadata')"
+        [ngClass]="{
+          'bg-green-500 text-white': activeTab === 'metadata',
+          'hover:bg-green-600 hover:text-white transition duration-300 ease-in-out': activeTab !== 'metadata'
+        }"
+        class="block w-full text-left px-4 py-3 rounded-lg shadow-md transform hover:scale-105"
+      >
+        {{ 'SIDEBAR.METADATA' | translate }}
+      </button>
+    </li>
+  </ul>
+
+
+</div>
